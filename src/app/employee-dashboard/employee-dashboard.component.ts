@@ -44,24 +44,17 @@ export class EmployeeDashboardComponent implements OnInit {
     this.employeeModalObj.mobile = this.formValue.value.mobile;
     this.employeeModalObj.salary = this.formValue.value.salary;
 
-    this.api.postEmployee(this.employeeModalObj).subscribe(
-      (res) => {
-        console.log('resssssssss', res);
-        alert('Employee Added Successfully');
+    this.api.postEmployee(this.employeeModalObj).subscribe((res) => {
+      console.log('resssssssss', res);
+      alert('Employee Added Successfully');
 
-        let ref = document.getElementById('cancel');
-        ref?.click();
+      let ref = document.getElementById('cancel');
+      ref?.click();
 
-        this.formValue.reset();
+      this.formValue.reset();
 
-        this.getAllEmployee();
-      },
-      (error) => {
-        console.log('error', error);
-
-        alert('Something Went Wrong');
-      }
-    );
+      this.getAllEmployee();
+    });
 
     // this.api.postEmployee(this.employeeModalObj).subscribe({
     //   next : this.
