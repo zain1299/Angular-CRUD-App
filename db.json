@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "firstName": "Zain",
+      "lastName": "Ul Abideen",
+      "email": "Zain",
+      "mobile": "0331265468",
+      "salary": "56521"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
