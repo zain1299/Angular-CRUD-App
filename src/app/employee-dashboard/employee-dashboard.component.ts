@@ -55,10 +55,6 @@ export class EmployeeDashboardComponent implements OnInit {
 
       this.getAllEmployee();
     });
-
-    // this.api.postEmployee(this.employeeModalObj).subscribe({
-    //   next : this.
-    // })
   }
 
   getAllEmployee() {
@@ -67,8 +63,8 @@ export class EmployeeDashboardComponent implements OnInit {
     });
   }
 
-  deleteEmployee(row: any) {
-    this.api.deleteEmployee(row.id).subscribe((res) => {
+  deleteEmployee(id: number) {
+    this.api.deleteEmployee(id).subscribe((res) => {
       alert('Employee has been Deleted');
       this.getAllEmployee();
     });
